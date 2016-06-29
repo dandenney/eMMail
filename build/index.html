@@ -1,0 +1,109 @@
+          <html>
+            <head>
+              <style>
+                .gibberish {
+                  margin: auto;
+                  color: #999;
+                  text-align: center;
+                }
+
+                .gibberish-instructions,
+                .gibberish-password,
+                .gibberish-message
+                {
+                  margin-bottom: 1em;
+                }
+
+                .gibberish-password {
+                  border: 1px solid #ccc;
+                }
+
+                .gibberish-message {
+                  margin: auto;
+                  color: #633;
+                }
+              </style>
+            </head>
+
+            <body style='width:100%;'>
+              <br>
+              <br>
+              <br>
+              <div class='gibberish'>
+
+                <div class='gibberish-instructions'>
+                  enter password and press &lt;enter&gt;
+                </div>
+
+                <input id='gibberish-password' name='gibberish-password' type='password' class='gibberish-password'/>
+
+                <div class='gibberish-message'>
+                </div>
+
+              </div>
+            </body>
+          </html>
+
+
+          <script src='http://ahoward.github.io/middleman-gibberish/assets/jquery.js' type='text/javascript'></script>
+<script src='http://ahoward.github.io/middleman-gibberish/assets/jquery.cookie.js' type='text/javascript'></script>
+<script src='http://ahoward.github.io/middleman-gibberish/assets/gibberish.js' type='text/javascript'></script>
+
+          <script>
+            var encrypted = "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\na05opG5AEzwYz+lTEoBA+uPMEhjbLiqAAA==\n";
+            var cookie = "*";
+            var options = {path: "/", expires: 1};
+
+            jQuery(function(){
+              var password = jQuery('.gibberish-password');
+              var message  = jQuery('.gibberish-message');
+
+              password.focus();
+              message.html('');
+
+              var decrypt = function(_password){
+                if(_password){
+                  try{
+                    var decrypted = GibberishAES.dec(encrypted, _password);
+                    document.write(decrypted);
+
+                    try{
+                      jQuery.cookie(cookie, _password, options);
+                    } catch(e) {
+                    };
+
+                    return true;
+                  } catch(e) {
+                    try{
+                      jQuery.removeCookie(cookie, options);
+                    } catch(e) {
+                    };
+
+                    return false;
+                  };
+                }
+
+                return false;
+              };
+
+              password.keyup(function(e){
+                var code = e.which;
+                e.preventDefault();
+
+                if(code==13){
+                  var _password = password.val();
+                  if(!decrypt(_password)){
+                    message.html("sorry, wrong password - try again.");
+                  }
+                } else {
+                  message.html("");
+                }
+
+                return(false);
+              });
+
+
+              var _password = jQuery.cookie(cookie);
+              decrypt(_password);
+            });
+          </script>
