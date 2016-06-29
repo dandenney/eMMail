@@ -1,0 +1,15 @@
+!!! 5
+%html{ lang: 'en' }
+	%head
+	%meta{ charset: 'utf-8' }
+	%meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+
+	%title= current_page.data.title
+
+	- # Sets a local variable to shorten calls to 'e'
+	- e = current_page.data
+
+	%body{ style: 'margin: 0; padding: 0;' }
+
+		= yield
+

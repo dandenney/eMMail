@@ -1,0 +1,23 @@
+- # Sets a local variable to shorten calls to 'e'
+- e = current_page.data
+
+- # -----------------------------------
+- # Footer
+- # -----------------------------------
+
+%table.wrapper{ tbl_reset, bgcolor: e.cFtrBg, style: "color: #{e.cFtrText}; font-size: 12px;", width: '100%' }
+
+  -# Content
+  %tr
+    %td.text{ align: 'center', style: "color: #{e.cFtrText}; font-family: #{e.tFamily}; font-size: 16px; line-height: 24px; padding-top: 16px;" }
+
+      Global footer, yo.
+
+  -# Content
+  %tr
+    %td.text{ align: 'center', style: "color: #{e.cFtrText}; font-family: #{e.tFamily}; font-size: 16px; line-height: 24px; padding-bottom: 16px;" }
+
+      %a{ href: "#", style: "color: #{e.cFtrLink};" }
+        Unsubscribe
+
+      &nbsp; :(

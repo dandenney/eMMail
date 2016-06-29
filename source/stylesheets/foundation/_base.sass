@@ -1,0 +1,92 @@
+// *************************************
+//
+//   Base
+//   -> Tag-level settings
+//
+// *************************************
+
+html
+  background: $c-background
+  color: $c-text
+  font-family: $b-fontFamily
+  font-size: $b-fontSize
+  font-weight: 300
+  line-height: $b-lineHeight
+  height: 100%
+
+body
+  font-size: 100%
+  height: 100%
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+p
+  margin-bottom: $b-space
+  margin-top: 0
+
+ul,
+li
+  margin: 0
+  padding: 0
+
+table
+  background: rgba($c-background-invert, 0.1)
+  border: 1px solid #5f1380
+  border-radius: $b-borderRadius
+  box-shadow: $b-boxShadow
+  overflow: hidden
+  width: 100%
+
+th,
+td
+  border: 1px solid #5f1380
+  color: $c-text-invert
+  padding: $b-space-s $b-space
+  text-align: left
+
+// ----- Headings ----- //
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4
+  color: $c-text-invert
+  font-family: $b-fontFamily-heading
+  font-weight: 600
+  line-height: 1.2
+  margin-bottom: $b-space-xs
+  margin-top: 0
+
+h1, .h1
+  font-size: 200%
+
+h2, .h2
+  font-size: 150%
+
+h3, .h3
+  font-size: 125%
+
+h4, .h4
+  font-size: 110%
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+// ----- Links ----- //
+
+a
+  color: $c-highlight
+  font-weight: 600
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: mix(#000, $c-highlight, 10%)
+
+// ----- Images ----- //
+
+img
+  height: auto
+  max-width: 100%

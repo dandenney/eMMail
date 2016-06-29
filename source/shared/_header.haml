@@ -1,0 +1,15 @@
+- # Sets a local variable to shorten calls to 'e'
+- e = current_page.data
+
+- # -----------------------------------
+- # Header
+- # -----------------------------------
+
+%table.header{ tbl_reset, bgcolor: e.cHdrBg, width: '100%' }
+
+  -# Content
+  %tr
+    %td.text{ align: 'center', style: "border-bottom: 1px solid #f7f7f7; color: #{e.cText}; font-family: #{e.tFamily}; font-size: 16px; line-height: 24px; padding: 12px 0;" }
+
+      %a{ href: "#", style: "color: #{e.cHdrLink}; font-weight: 600;" }
+        Global Header, yo.

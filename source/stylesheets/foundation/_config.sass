@@ -1,0 +1,106 @@
+// *************************************
+//
+//   Config
+//   -> Fonts, Variables
+//
+// *************************************
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+// ----- Open Sans ----- //
+
+// +font-face('OpenSans', 'OpenSans')
+// +font-face('OpenSans', 'OpenSansBold', bold)
+// +font-face('OpenSans', 'OpenSansItalic', normal, italic)
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+// ----- Palette ----- //
+
+$geyser: #d2dce3
+$deyork: #74c198
+// ----- Base ----- //
+
+$c-background-invert: #fff
+$c-background: #ecf1f5
+$c-border: $geyser
+$c-highlight: #fbea4d // todo: make this a variable
+$c-subdue: lighten($geyser, 40%)
+$c-text-invert: #fff
+$c-text: #596885
+
+// ----- Components ----- //
+
+// ...
+
+// ----- Structures ----- //
+
+// ...
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- Borders & Box Shadow ----- //
+
+$b-borderRadius: 3px
+$b-borderStyle: solid
+$b-borderWidth: 1px
+$b-border: $b-borderWidth $b-borderStyle $c-border
+$b-boxShadow: 0px 2px 3px -1px rgba(151, 171, 187, 0.3)
+
+// ----- Typography ----- //
+
+$b-fontFamily-heading: "proxima-nova",sans-serif
+$b-fontFamily: "proxima-nova",sans-serif
+$b-fontSize: 16px
+$b-fontSize-xs: 60%
+$b-fontSize-s: 75%
+$b-fontSize-m: 90%
+$b-fontSize-l: 115%
+$b-fontSize-xl: 150%
+$b-lineHeight: 1.5
+
+// ----- Sizing ----- //
+
+$b-maxWidth: em(1024px)
+$b-maxWidth-s: em(700px)
+$b-space: em(20px)
+$b-space-xs: $b-space * 0.25
+$b-space-s: $b-space * 0.5
+$b-space-l: $b-space * 2
+$b-space-xl: $b-space * 4
+
+// -------------------------------------
+//   Components
+// -------------------------------------
+
+// ----- Grid ----- //
+
+// Breakpoints
+
+$g-s: em(480px)
+$g-m: em(800px)
+$g-l: em(1024px)
+
+// Settings
+
+$g-columns: 12
+$g-defaults: 's' $g-s, 'm' $g-m, 'l' $g-l
+$g-gutter: 20px
+$g-silent: false
+
+// Selector
+
+$g-selector: if($g-silent, unquote("%"), unquote("."))
+
+// -------------------------------------
+//   Structures
+// -------------------------------------
+
+// ...
+

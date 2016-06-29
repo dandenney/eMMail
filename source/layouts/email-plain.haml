@@ -1,0 +1,67 @@
+!!! 5
+%html{ lang: 'en' }
+  %head
+  %meta{ charset: 'utf-8' }
+  %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+
+  %title= current_page.data.title
+
+  - # Sets a local variable to shorten calls to 'e'
+  - e = current_page.data
+
+  %body{ style: 'margin: 0; padding: 0;' }
+
+    - # -----------------------------------
+    - # Header
+    - # -----------------------------------
+
+    %table.header{ tbl_reset, bgcolor: e.cHdrBg, width: '100%' }
+      %tr
+        %td{ align: 'center', style: "padding: 12px 0;"}
+          %a{ href: 'https://www.codeschool.com' }
+            %img{ alt: 'Code School', border: '0', src: 'https://gallery.mailchimp.com/8234ed62d6a7fa87721ff1d8a/images/3b956e42-1381-4d47-8332-808334d3b280.png', width: '190' }
+
+    - # -----------------------------------
+    - # Content
+    - # -----------------------------------
+
+    = yield
+
+    - # -----------------------------------
+    - # Footer
+    - # -----------------------------------
+
+    %table.wrapper{ tbl_reset, style: "color: #{e.cFtrText}; font-size: 12px;", width: '100%' }
+      %tr
+        %td{ align: 'center', style: 'padding-top: 32px;' }
+
+          -# ====================================
+          -#   Content Address
+          -# ====================================
+
+          %table.flex-size{ tbl_reset, align: 'center' }
+
+            -# Content
+            %tr
+              %td.text{ align: 'center', style: "color: #{e.cFtrText}; font-family: #{e.tFamily}; font-size: 12px; line-height: 18px; padding: 32px 20px 0 20px;" }
+
+                &copy; 2016 Code School LLC. Crafted lovingly in Orlando, Florida.
+
+            -# Content
+            %tr
+              %td.text{ align: 'center', style: "color: #{e.cFtrText}; font-family: #{e.tFamily}; font-size: 12px; line-height: 18px; padding: 0 20px;" }
+
+                %span.maskLink-footer *|LIST:ADDRESS|*
+
+            -# Content
+            %tr
+              %td.text{ align: 'center', style: "color: #{e.cFtrText}; font-family: #{e.tFamily}; font-size: 12px; line-height: 18px; padding: 16px 0 32px 0;" }
+
+                %a{ href: "https://www.codeschool.com/account/edit",  style: "color: #{e.cFtrLink};" } Edit your email settings
+
+                &nbsp; &nbsp;
+
+                %a{ href: "*|UNSUB|*", style: "color: #{e.cFtrLink};" }
+                  Unsubscribe
+
+

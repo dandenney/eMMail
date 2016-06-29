@@ -1,0 +1,66 @@
+---
+layout: email
+title: Announcement
+type: promotional
+category: announcement
+statsDate:
+statOpenRate:
+statClickRate:
+
+cHdrBg: "#ffffff"
+cHdrLink: "#0b684d"
+cHdrText: "#37a381"
+
+cFtrBg: "#2d3033"
+cFtrLink: "#aebdc1"
+cFtrText: "#aebdc1"
+
+cBg: "#148a70"
+cLink: "#ffee99"
+cText: "#ffffff"
+cTitle: "#575a5b"
+
+tFamily: "Verdana, Helvetica, Arial, sans-serif"
+
+tracker: "?utm_medium=email&utm_campaign=announcement-you-me-svg&utm_source=mailchimp&utm_content=null"
+---
+
+- # Sets a local variable to shorten calls to 'e'
+- e = current_page.data
+
+-# =====================================
+-#   Wrapper - Email
+-# =====================================
+
+%table{ tbl_reset, bgcolor: "#{e.cBg}", width: "100%" }
+  %tr
+    %td{ align: 'center', style: 'padding: 40px 20px 48px 20px;' }
+
+      -# ====================================
+      -#   Content Container
+      -# ====================================
+
+      %table.flex-size{ tbl_reset, align: 'center' }
+
+        %tr
+          %td{ style: 'font-size: 0;' } &nbsp;
+
+          %td{ width: '480' }
+
+            -# ====================================
+            -#   Content
+            -# ====================================
+
+            %table{ tbl_reset, width: "100%" }
+              %tr
+                %td.text{ style: "color: #{e.cText}; font-family: #{e.tFamily}; font-size: 16px; line-height: 24px;" }
+
+                  Content, yo.
+
+              -# Content
+              %tr
+                %td.text{ align: 'left', style: "color: #{e.cText}; font-family: #{e.tFamily}; font-size: 16px; line-height: 24px;" }
+
+                  %a{ href: "#/#{e.tracker}", style: "color: #{e.cLink}; font-weight: 600;" } link with tracker
+
+          %td{ style: 'font-size: 0;' } &nbsp;

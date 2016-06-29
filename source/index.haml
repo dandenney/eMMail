@@ -1,0 +1,60 @@
+---
+title: Code School Emails
+type: email
+---
+- e = current_page.data
+
+.page
+
+	.row
+		.cell.well
+
+			= image_tag 'logo-email.svg', class: 'db mhc', width: '200'
+
+			%h2.mtm Transactional
+			%table(data-sortable)
+				%thead
+					%th
+						Title
+					%th
+						Category
+					%th
+						Stats Date
+					%th
+						Open Rate
+					%th
+						Click Rate
+				- get_resources("transactional").each do |transactional|
+					%tr{ class: "#{transactional.data.inactive}" }
+						%td=link_to transactional.data.title, transactional.url
+						%td.category= transactional.data.category
+						%td.stats-date= transactional.data.statsDate
+						%td.stat-open-rate= transactional.data.statOpenRate
+						%td.stat-click-rate= transactional.data.statClickRate
+
+			%h2.mtl Promotional
+			%table(data-sortable)
+				%thead
+					%th
+						Title
+					%th
+						Category
+					%th
+						Stats Date
+					%th
+						Open Rate
+					%th
+						Clicks Per Unique
+				- get_resources("promotional").each do |promotional|
+					%tr{ class: "#{promotional.data.inactive}" }
+						%td.category=link_to promotional.data.title, promotional.url
+						%td.category= promotional.data.category
+						%td.stats-date= promotional.data.statsDate
+						%td.stat-open-rate= promotional.data.statOpenRate
+						%td.stat-click-rate= promotional.data.statClickRate
+
+			%h2.mtl Templates
+			%table
+				- get_resources("template").each do |template|
+					%tr
+						%td=link_to template.data.title, template.url
